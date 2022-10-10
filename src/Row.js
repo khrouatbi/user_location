@@ -6,16 +6,16 @@ import Card from "./Card"
 
 
 // Row component
-export default function Row({ title, fetchURL }) {
-  /* Creating a movie state (short term memory) */
-  const [movies, setMovies] = useState([]);
-  //   Pulling information from tmdb API when the pages loads
+export default function Row({  fetchURL }) {
+  /* Creating a state (short term memory) */
+  const [users, setUsers] = useState([]);
+  //   Pulling information from API when the pages loads
   useEffect(() => {
     //   Running async call
     async function fetchData() {
-      // Waiting for the promise to come back with movie results, fetchURL(outside the code block)
+      // Waiting for the promise to come back with results, fetchURL(outside the code block)
       const request = await axios.get(fetchURL);
-      setMovies(request.data);
+      setUsers(request.data);
       console.log(request.data)
       return request;
     }
@@ -36,17 +36,27 @@ export default function Row({ title, fetchURL }) {
       <h2></h2>
 
       <div className="row__posters">
-        {movies.map((movie) => (
+        {users.map((user) => (
 
           
           
-            <Card key={movie._id} data={movie}/>
+            <Card key={user._id} data={user}/>
 
 
  
         ))}
      
       </div>
+
+    
+    </div>
+   
+
+
+
+  );
+}
+
 
     
     </div>
