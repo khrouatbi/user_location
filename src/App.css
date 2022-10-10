@@ -1,0 +1,14 @@
+
+.leaflet-container {
+    width: 100%;
+    height: 100vh;
+  }
+
+/* Applies to the html document */
+* {
+  margin:0;
+}
+/* Styling app component */
+.app {
+  background-color: #111;
+}
