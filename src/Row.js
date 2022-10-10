@@ -58,12 +58,3 @@ export default function Row({  fetchURL }) {
 }
 
 
-    
-    </div>
-   
-
-
-
-  );
-}
-
