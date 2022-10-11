@@ -11,12 +11,6 @@ import { useContext } from "react";
 export default function Card(props) {
     const { userDetails,setDetails} = useContext(UserContext)
     
-    console.log('the tye here', typeof setDetails); 
-
-    // const handleClick =() => {
-    //     setDetails(props.data);
-    //     console.log('hiiiii', userDetails);
-    //   };
     return (
         <div className="card">
             <Link to= {`/users/`} >
